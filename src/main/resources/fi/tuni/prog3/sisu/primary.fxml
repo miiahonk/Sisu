@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane minHeight="518.0" minWidth="637.0" prefHeight="557.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fi.tuni.prog3.sisu.PrimaryController">
+   <children>
+      <GridPane prefHeight="548.0" prefWidth="700.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="446.00002034505206" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="101.99997965494794" minHeight="10.0" prefHeight="101.99997965494794" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="447.0" prefWidth="600.0">
+               <children>
+                  <StackPane layoutX="-3.0" layoutY="-3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TabPane prefHeight="407.0" prefWidth="637.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab id="studentTab" closable="false" text="Student">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="422.0" prefWidth="600.0">
+                                       <children>
+                                          <GridPane hgap="10.0" prefHeight="348.0" prefWidth="600.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="460.33331298828125" minWidth="10.0" prefWidth="405.3333333333333" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.33331298828125" minWidth="10.0" prefWidth="164.66666666666669" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="257.66664123535156" minHeight="10.0" prefHeight="51.66665267944336" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="293.66667556762695" minHeight="10.0" prefHeight="135.00001017252603" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="293.66667556762695" minHeight="10.0" prefHeight="121.99998982747397" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <children>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Label prefHeight="17.0" prefWidth="283.0" text="Current student:" />
+                                                      <Label id="nameLabel" fx:id="nameLabel" prefHeight="17.0" prefWidth="257.0" />
+                                                   </children>
+                                                </VBox>
+                                                <GridPane vgap="10.0" GridPane.rowIndex="1">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.66668701171875" minWidth="10.0" prefWidth="154.00000762939453" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.33333079020184" minWidth="10.0" prefWidth="251.33332570393878" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Name:" GridPane.rowIndex="1" />
+                                                      <Label text="Add a new student and start tracking their progress" GridPane.columnSpan="2" />
+                                                      <Label text="Student ID:" GridPane.rowIndex="2" />
+                                                      <TextField id="nameField" fx:id="nameField" pickOnBounds="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <TextField id="idField" fx:id="idField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <Button id="saveBtn" fx:id="saveBtn" mnemonicParsing="false" onAction="#saveNewStudent" prefHeight="25.0" prefWidth="120.0" text="Save" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                                   </GridPane.margin>
+                                                </GridPane>
+                                                <GridPane vgap="10.0" GridPane.rowIndex="2">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.66668701171875" minWidth="10.0" prefWidth="154.00000762939453" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.33333079020184" minWidth="10.0" prefWidth="251.33332570393878" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label text="Student ID:" GridPane.rowIndex="1" />
+                                                      <TextField id="studentIdField" fx:id="studentIdField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Label text="Enter student ID to edit previously saved progress:" GridPane.columnSpan="2" />
+                                                      <Button id="findStudentBtn" fx:id="findStudentBtn" mnemonicParsing="false" onAction="#openExisting" prefHeight="25.0" prefWidth="121.0" text="Select" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                                   </GridPane.margin>
+                                                </GridPane>
+                                                <GridPane>
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.33331298828125" minWidth="10.0" prefWidth="127.66665649414062" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.6666564941406" minWidth="10.0" prefWidth="278.3333435058594" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <VBox>
+                                                         <children>
+                                                            <Label text="Student">
+                                                               <font>
+                                                                  <Font size="24.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="Enter existing student or add a new one" wrapText="true" />
+                                                         </children>
+                                                      </VBox>
+                                                      <Label id="studentWarningLabel" fx:id="studentWarningLabel" wrapText="true" GridPane.columnIndex="1" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                </GridPane>
+                                                <Label id="notFoundLabel" fx:id="notFoundLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Label id="invalidDataLabel" fx:id="invalidDataLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab id="degreeTab" fx:id="degreeTab" closable="false" disable="true" text="Degree program">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <GridPane alignment="CENTER" layoutY="-14.0" prefHeight="451.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="407.33331298828125" minWidth="10.0" prefWidth="224.66668701171875" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="301.33331298828125" minWidth="10.0" prefWidth="188.33333333333334" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="301.33331298828125" minWidth="10.0" prefWidth="215.00000000000006" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="144.0" minHeight="0.0" prefHeight="89.99999109903972" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="360.0" minHeight="10.0" prefHeight="310.66667556762695" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <VBox>
+                                                   <children>
+                                                      <Label text="Degree programs">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Choose your degree program" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="97.0" prefWidth="373.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Label text="Current degree program:" />
+                                                      <Label id="degreeLabel" fx:id="degreeLabel" prefHeight="38.0" prefWidth="205.0" text="None" wrapText="true" />
+                                                   </children>
+                                                </VBox>
+                                                <Button id="saveDegreeBtn" fx:id="saveDegreeBtn" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#setNewDegree" text="Choose degree program" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                <ScrollPane GridPane.columnSpan="3" GridPane.rowIndex="1">
+                                                   <content>
+                                                      <AnchorPane prefHeight="303.0" prefWidth="563.0">
+                                                         <padding>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                         </padding>
+                                                         <children>
+                                                            <VBox id="degreeBox" fx:id="degreeBox" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </GridPane.margin>
+                                                </ScrollPane>
+                                                <Label id="degreeWarningLabel" fx:id="degreeWarningLabel" wrapText="true" GridPane.columnIndex="1" />
+                                                <Label id="waitLabel" fx:id="waitLabel" wrapText="true" GridPane.columnIndex="1" />
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab id="moduleTab" fx:id="moduleTab" closable="false" disable="true" text="Modules and courses">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <GridPane layoutX="7.0" layoutY="-14.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="0.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="415.9999694824219" minHeight="10.0" prefHeight="59.999996185302734" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="415.9999694824219" minHeight="10.0" prefHeight="325.3333371480306" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <SplitPane dividerPositions="0.6713961407491488" prefHeight="160.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                  <items>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                         <children>
+                                                            <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <content>
+                                                                  <VBox id="moduleBox" fx:id="moduleBox" prefHeight="342.0" prefWidth="585.0">
+                                                                     <padding>
+                                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                     </padding>
+                                                                  </VBox>
+                                                               </content>
+                                                            </ScrollPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="309.0" prefWidth="197.0">
+                                                         <children>
+                                                            <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                                                                  <RowConstraints maxHeight="67.99999618530273" minHeight="10.0" prefHeight="66.66668319702148" vgrow="SOMETIMES" />
+                                                                  <RowConstraints maxHeight="321.999994913737" minHeight="10.0" prefHeight="230.6666501363119" vgrow="SOMETIMES" />
+                                                                  <RowConstraints maxHeight="321.999994913737" minHeight="10.0" prefHeight="45.3333689371745" vgrow="SOMETIMES" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <ScrollPane GridPane.rowIndex="1">
+                                                                     <content>
+                                                                        <VBox id="courseBox" fx:id="courseBox" prefHeight="275.0" prefWidth="240.0">
+                                                                           <padding>
+                                                                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                           </padding>
+                                                                        </VBox>
+                                                                     </content>
+                                                                  </ScrollPane>
+                                                                  <Button id="saveChanges" fx:id="saveChanges" disable="true" mnemonicParsing="false" onAction="#saveCourses" text="Save changes" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                                  <Label text="Mark courses in this module as completed. Please note that switching between modules will delete unsaved changes." wrapText="true">
+                                                                     <font>
+                                                                        <Font size="10.0" />
+                                                                     </font>
+                                                                     <GridPane.margin>
+                                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                     </GridPane.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </items>
+                                                </SplitPane>
+                                                <GridPane>
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <VBox>
+                                                         <children>
+                                                            <Label text="Modules and courses">
+                                                               <font>
+                                                                  <Font size="24.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="Mark courses as completed and track your progress" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox GridPane.columnIndex="1" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                       <padding>
+                                          <Insets right="10.0" top="10.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+            <GridPane prefHeight="119.0" prefWidth="675.0" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="426.6666259765625" minWidth="10.0" prefWidth="384.6666259765625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.66668701171875" minWidth="10.0" prefWidth="215.3333740234375" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="36.3333740234375" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="40.33331298828125" minHeight="10.0" prefHeight="27.666666666666664" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="40.33331298828125" minHeight="10.0" prefHeight="40.33331298828125" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button id="saveProgressBtn" fx:id="saveProgressBtn" disable="true" mnemonicParsing="false" onAction="#saveProgress" prefHeight="25.0" prefWidth="180.0" text="Save progress" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label id="studentInfoLabel" fx:id="studentInfoLabel">
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label id="degreeInfoLabel" fx:id="degreeInfoLabel" prefHeight="17.0" prefWidth="621.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding></Label>
+                  <HBox alignment="CENTER" spacing="10.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <children>
+                        <ProgressBar id="progressBar" fx:id="progressBar" prefHeight="18.0" prefWidth="289.0" progress="0.0" />
+                        <Label id="creditLabel" fx:id="creditLabel" text="?/? cr" />
+                     </children>
+                  </HBox>
+                  <Label id="progressLabel" fx:id="progressLabel" text="0 % completed" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</Pane>
